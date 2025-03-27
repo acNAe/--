@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif; /* フォントをArialに設定（なければ他のsans-serifを適用） */
+    text-align: center; /* すべてのテキストを中央揃え */
+    background-color: #f4f4f4; /* 背景色を薄いグレーに */
+}
+
+button {
+    background-color: #007BFF; /* 背景色（青） */
+    color: white; /* 文字色（白） */
+    font-size: 18px; /* 文字サイズ */
+    padding: 10px 20px; /* 内側の余白（上下10px、左右20px） */
+    border: none; /* 枠線をなくす */
+    border-radius: 5px; /* 角を丸くする */
+    cursor: pointer; /* マウスを載せると指マーク（クリックできる） */
+    transition: background-color 0.3s; /* 色の変化を0.3秒かけて滑らかに */
+}
+
+/* 📌 ボタンにマウスを載せたときのスタイル */
+button:hover {
+    background-color: #0056b3; /* 背景色を少し暗めの青に */
+}
+
+/* 📌 リザルトのメッセージスタイル */
+.result {
+    font-size: 30px;
+    /* 文字を大きく */
+    font-weight: bold;
+    /* 太字にする */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    /* サイズ調整 */
+    transition: transform 0.3s ease-in-out;
+    /* アニメーション */
+}
+
+/* 📌 勝ちのとき */
+.win {
+    background-color: #4CAF50;
+    /* 緑 */
+    color: white;
+}
+
+/* 📌 負けのとき */
+.lose {
+    background-color: #FF5733;
+    /* 赤 */
+    color: white;
+    animation: shake 0.3s ease-in-out;
+    /* 震えるエフェクト */
+}
+
+/* 📌 引き分けのとき */
+.draw {
+    background-color: #3498DB;
+    /* 青 */
+    color: white;
+}

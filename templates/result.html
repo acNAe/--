@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん結果</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>じゃんけんの結果</h1>
+
+    <!-- ここにFlaskから受け取ったデータ（ユーザーの手と結果）を表示 -->
+    <p>あなたの手: <strong>{{ user_hand }}</strong></p>
+    <p>コンピュータの手: <strong>{{ computer_hand }}</strong></p>
+
+    <!-- 勝敗の結果を表示 -->
+    <div class="result {{ result_class }}">
+        {{ result_message }}
+    </div>
+
+    <!-- もう一度じゃんけんをするボタン -->
+    <a href="/play"><button>もう一度じゃんけん！</button></a>
+</body>
+
+</html>

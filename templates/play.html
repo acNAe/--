@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードをUTF-8に設定（日本語の文字化け防止） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>じゃんけんをしよう！</h1>
+    <p>グー・チョキ・パーの中から選んでね。</p>
+
+    <!-- じゃんけんの選択ボタン -->
+    <form action="/result" method="post">
+        <!-- 送信先は "/result"（Flask側で受け取る） -->
+        <!-- method="post" はデータを送るためのHTTPメソッド -->
+
+        <!-- それぞれのボタンを押すと、"hand" という名前で値を送る -->
+        <button type="submit" name="hand" value="グー">✊ グー</button>
+        <button type="submit" name="hand" value="チョキ">✌ チョキ</button>
+        <button type="submit" name="hand" value="パー">🖐 パー</button>
+    </form>
+
+</body>
+
+</html>

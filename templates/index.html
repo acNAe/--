@@ -1,0 +1,22 @@
+<!DOCTYPE html> <!-- HTML5を使うことを宣言 -->
+<html lang="ja"> <!-- 言語を日本語に設定 -->
+
+<head>
+    <meta charset="UTF-8"> <!-- 文字コードをUTF-8に設定（日本語が文字化けしないように） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- スマホでも見やすくする -->
+    <title>じゃんけんゲーム</title> <!-- ブラウザのタブに表示されるタイトル -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>じゃんけんゲームへようこそ！</h1> <!-- 見出し -->
+    <p>このゲームで遊ぶには、ボタンを押してください。</p> <!-- 説明文 -->
+
+    <!-- ゲームを開始するボタン -->
+    <form action="/play" method="get">
+        <button type="submit">ゲームを始める</button>
+
+    </form>
+</body>
+
+</html>
